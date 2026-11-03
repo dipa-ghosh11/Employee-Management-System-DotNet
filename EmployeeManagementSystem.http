@@ -1,0 +1,6 @@
+@EmployeeManagementSystem_HostAddress = http://localhost:5045
+
+GET {{EmployeeManagementSystem_HostAddress}}/api/health/mongodb
+Accept: application/json
+
+###
