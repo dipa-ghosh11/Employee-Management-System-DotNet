@@ -29,6 +29,8 @@ builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
     return new MongoClient(settings.ConnectionString);
 });
 
+
+
 // Register MongoDB database
 builder.Services.AddSingleton<IMongoDatabase>(serviceProvider =>
 {
@@ -42,6 +44,7 @@ builder.Services.AddSingleton<IMongoDatabase>(serviceProvider =>
 });
 
 builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<DepartmentService>();
 
 // Build the application AFTER all registrations
 var app = builder.Build();
